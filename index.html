@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games</title>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/128/16385/16385394.png" type="image/x-icon">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            /* background-color: darkcyan; */
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background-image: url("https://img.freepik.com/free-photo/studio-background-concept-abstract-empty-light-gradient-purple-studio-room-background-product_1258-53856.jpg?w=1380&t=st=1722701028~exp=1722701628~hmac=59094e4908d955ffd6d2bcedd3d7fa4281b3663b0057b1f2e599c6724f15a041");
+            transition: ease-in-out 0.5s;
+        }
+        input{
+            padding: 10px 15px;
+            border-radius: 10px;
+            border: none;
+            margin: 10px 0px;
+            transition: ease-in-out 0.5s;
+        }
+        label{
+            text-align: left;
+            font-size: 20px;
+            width: 195px;
+            transition: ease-in-out 0.5s;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+            background-color: rgba(240, 128, 128, 0.096);
+            padding: 15px 25px;
+            border-radius: 15px;
+            font-size: 20px;
+            margin-top: 15px;
+            transition: ease-in-out 0.5s;
+        }
+        .input{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+            justify-content: center;
+            transition: ease-in-out 0.5s;
+        }
+        h1{
+            position: absolute;
+            top: 50px;
+            text-align: center!important;
+            margin-left: 156px;
+            transition: ease-in-out 0.5s;
+        }
+        .container{
+            width: 600px;
+            height: 300px;
+            border: 1px solid gray;
+            border-radius: 15px;
+            background-color: rgba(173, 216, 230, 0.11);
+            transition: ease-in-out 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <h1>Tic Tac Toe Games</h1>
+        <div class="input">
+            <label for="A">Player A</label>
+            <input type="text" id="A" placeholder="Enter Name">
+            
+            <label for="B">Player B</label>
+            <input type="text" id="B" placeholder="Enter Name">
+        </div>
+    </div>
+        <a href="/ind.html" onclick="store()">Play Games</a>
+    <!-- <button onclick="store()">ok</button> -->
+    <script>
+        
+        let store = () =>{
+            let FirstP = document.getElementById("A").value;
+            let SecondP = document.getElementById("B").value;
+                    
+            let array = [FirstP,SecondP];
+            sessionStorage.setItem("stores",JSON.stringify(array))
+        } 
+       
+     
+        
+
+    </script>
+</body>
+</html>
